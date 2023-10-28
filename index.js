@@ -7,7 +7,6 @@ const defaultTypedocOptions = {
     exclude: '**/node_modules/**/*.*',
     excludeExternals: true,
     out: './docs',
-    nojekyll: false // ??
 };
 
 function rollupTypedoc(options) {
@@ -22,13 +21,12 @@ function rollupTypedoc(options) {
 }
 
 async function generateDocs(options) {
-    const app = new TypeDoc.Application();
+    const app = await TypeDoc.Application.bootstrap(options);
 
     app.options.addReader(new TypeDoc.TSConfigReader());
     app.options.addReader(new TypeDoc.TypeDocReader());
-    app.bootstrap(options);
 
-    const project = app.convert();
+    const project = await app.convert();
 
     if (project) {
         if (options.json) {

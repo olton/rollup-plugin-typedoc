@@ -11,11 +11,11 @@ Typedoc is required as peer dependency.
 ```bash
 npm i typedoc --save-dev
 ```
-<!-- todo: no-.nojekyll -->
+
 ## Usage
 ```js
 import typescript from '@rollup/plugin-typescript';
-import typedoc from 'rollup-plugin-typedoc';
+import typedoc from '@olton/rollup-plugin-typedoc';
 
 // see https://typedoc.org/guides/options/
 const options = {
@@ -38,8 +38,4 @@ __Note:__ do not include this plugin for your watch configurations for performan
 
 ## License
 
-Original Plugin Copyright © 2021, [Sergey Chernykh](https://github.com/serglider).
-
-Copyright © 2023, [Serhii Pimenov](https://github.com/olton).
-
-Released under the [MIT License](LICENSE).
+Copyright © 2023, [Serhii Pimenov](https://github.com/olton). Released under the [MIT License](LICENSE).
