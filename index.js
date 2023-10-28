@@ -32,7 +32,8 @@ async function generateDocs(options) {
         if (options.json) {
             console.log('Generating typedoc json');
             await app.generateJson(project, options.json);
-        } else {
+        }
+        if (!options.json || options.out) {
             console.log('Generating updated typedocs');
             await app.generateDocs(project, options.out);
         }
