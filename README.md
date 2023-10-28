@@ -1,17 +1,10 @@
-<!-- ![npm](https://img.shields.io/npm/v/shake-detector)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/shake-detector)
-![NPM](https://img.shields.io/npm/l/shake-detector)
-![GitHub top language](https://img.shields.io/github/languages/top/serglider/shake-detector) -->
-
-<!--- https://shields.io/ badges -->
-
 # rollup-plugin-typedoc
 This plugin runs [Typedoc](https://typedoc.org/) to generate your API documentation as a step of your [Rollup](http://rollupjs.org/) flow.
 
 ## Setup
 
 ```bash
-npm i rollup-plugin-typedoc --save-dev
+npm i @olton/rollup-plugin-typedoc --save-dev
 ```
 
 Typedoc is required as peer dependency. 
