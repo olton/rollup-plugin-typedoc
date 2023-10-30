@@ -2,7 +2,7 @@
     "name": "@olton/rollup-plugin-typedoc",
     "author": "Serhii Pimenov <serhii@pimenov.com.ua> (https://github.com/olton/)",
     "homepage": "https://github.com/olton/rollup-plugin-typedoc",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "Typedoc compilation as a rollup plugin",
     "keywords": [
         "typedoc",

@@ -7,6 +7,9 @@ const defaultTypedocOptions = {
     exclude: '**/node_modules/**/*.*',
     excludeExternals: true,
     out: './docs',
+    markedOptions: {
+        silent: true
+    }
 };
 
 function rollupTypedoc(options) {
@@ -30,12 +33,14 @@ async function generateDocs(options) {
 
     if (project) {
         if (options.json) {
-            console.log('Generating typedoc json');
-            await app.generateJson(project, options.json);
+            try {
+                await app.generateJson(project, options.json);
+            } catch (e) {}
         }
         if (!options.json || options.out) {
-            console.log('Generating updated typedocs');
-            await app.generateDocs(project, options.out);
+            try {
+                await app.generateDocs(project, options.out);
+            } catch (e) {}
         }
     }
 }
