@@ -7,8 +7,9 @@ const defaultTypedocOptions = {
     exclude: '**/node_modules/**/*.*',
     excludeExternals: true,
     out: './docs',
-    markedOptions: {
-        silent: true
+    markdownItOptions: {
+        "html": true,
+        "linkify": true
     }
 };
 
